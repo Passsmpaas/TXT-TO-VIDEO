@@ -428,21 +428,18 @@ async def txt_handler(bot: Client, m: Message):
                 ytf = f"b[height<={raw_text2}]/bv[height<={raw_text2}]+ba/b/bv+ba"
             
             if "jw-prod" in url:
-                cmd = f'yt-dlp -o "{name}.mp4" "{url}"'
+    cmd = f'yt-dlp -o "{name}.mp4" "{url}"'
 
-            #elif "youtube.com" in url or "youtu.be" in url:
-                #cmd = f'yt-dlp --cookies youtube_cookies.txt -f "{ytf}" "{url}" -o "{name}".mp4'
+# elif "youtube.com" in url or "youtu.be" in url:
+#     cmd = f'yt-dlp --cookies youtube_cookies.txt -f "{ytf}" "{url}" -o "{name}".mp4'
 
-            
-            # Special handling for AppX .m3u8 links
-                # Special handling for AppX .m3u8 links
-                if "transcoded-videos.livelearn.in" in url or "appx-transcoded-videos" in url:
-                    cmd = f'yt-dlp --hls-prefer-native "{url}" -o "{name}.mp4"'
-                cmd = f'yt-dlp --hls-prefer-native "{url}" -o "{name}.mp4"'
+# Special handling for AppX .m3u8 links
+elif "transcoded-videos.livelearn.in" in url or "appx-transcoded-videos" in url:
+    cmd = f'yt-dlp --hls-prefer-native "{url}" -o "{name}.mp4"'
 
-                else:
-                cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
-
+else:
+    cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
+    
             try:  
                 cc = f'•——— `{a_name}` ———•\n\n[——— ✨ {str(count).zfill(3)} ✨ ———]({link0})\n\n🎞️𝐓𝐢𝐭𝐥𝐞 » `{name1} [{res}] .mp4`\n\n<pre><code>📚 Course : {b_name}</code></pre>\n\n🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » `{CR}`\n'
                 cc1 = f'•——— `{a_name}` ———•\n\n[——— ✨ {str(count).zfill(3)} ✨ ———]({link0})\n\n📕𝐓𝐢𝐭𝐥𝐞 » `{name1} .pdf`\n\n<pre><code>📚 Course : {b_name}</code></pre>\n\n🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » `{CR}`\n'
