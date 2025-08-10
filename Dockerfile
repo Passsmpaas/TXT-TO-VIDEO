@@ -16,6 +16,3 @@ COPY . /app/
 
 # Start both web and bot
 CMD gunicorn app:app & python3 main.py
-
-
-
