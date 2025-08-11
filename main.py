@@ -435,7 +435,7 @@ if "transcoded-videos.livelearn.in" in url:
     cmd = f'yt-dlp --hls-prefer-native "{url}" -o "{name}.mp4"'
 
 else:
-    cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
+    cmd = f'yt-dlp -f "{url}" -o "{name}.mp4"'
 
             try:  
                 cc = f'•——— `{a_name}` ———•\n\n[——— ✨ {str(count).zfill(3)} ✨ ———]({link0})\n\n🎞️𝐓𝐢𝐭𝐥𝐞 » `{name1} [{res}] .mp4`\n\n<pre><code>📚 Course : {b_name}</code></pre>\n\n🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » `{CR}`\n'
