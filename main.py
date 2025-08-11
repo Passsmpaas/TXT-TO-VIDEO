@@ -431,7 +431,7 @@ async def txt_handler(bot: Client, m: Message):
 #     cmd = f'yt-dlp --cookies youtube_cookies.txt -f "{ytf}" "{url}" -o "{name}".mp4'
 
 # Special handling for AppX .m3u8 links
-elif "transcoded-videos.livelearn.in" in url or "appx-transcoded-videos" in url:
+if "transcoded-videos.livelearn.in" in url or "appx-transcoded-videos" in url:
     cmd = f'yt-dlp --hls-prefer-native "{url}" -o "{name}.mp4"'
 
 else:
